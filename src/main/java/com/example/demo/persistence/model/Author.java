@@ -14,7 +14,7 @@ public class Author extends AbstractBaseEntity {
     public Author() {
     }
 
-    @ManyToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE},mappedBy = "books")
+    @ManyToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE},mappedBy = "authors")
     private Set<Book> books=new HashSet<>();
 
     public Set<Book> getBooks() {
